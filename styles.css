@@ -1,44 +1,67 @@
 *,
 ::before,
 ::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(260deg, #2346ae 0%, #c16edf 100%) ;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(260deg, #2346ae 0%, #b062cd 100%);
 }
 
 a {
-    color: #fff;
-    font-weight: 100;
-    letter-spacing: .125rem;
-    text-decoration: none;
-    background: rgba(0,0,0,0.2);
-    padding: 1.25rem .3125rem;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    transition: all 0.5s
+  color: #fff;
+  font-weight: 100;
+  letter-spacing: 0.125rem;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.25rem 0.3125rem;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition: all 0.5s;
 }
 
 a:hover {
-    background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .wrapper {
-    max-width: 62.5rem;
-    margin: 0 auto;
-    padding: 3.125rem;
+  max-width: 62.5rem;
+  margin: 0 auto;
+  padding: 3.125rem;
 }
 
 /* FLEX CONTAINER */
 
 .flex-nav ul {
-    display: flex;
-    border: .0625rem solid #000;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  border: 0.0625rem solid #000;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-nav li {
+  flex: 3;
+}
+
+.flex-nav .social {
+  flex: 1;
+}
+
+@media all and (max-width: 1000px) {
+  .flex-nav ul {
+    flex-wrap: wrap;
+  }
+  .flex-nav li {
+    flex: 1 1 50% ;
+  }
+}
+
+@media all and (max-width: 500px) {
+    .flex-nav li {
+        flex-basis: 100%;
+    }
 }
