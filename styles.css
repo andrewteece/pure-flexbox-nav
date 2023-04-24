@@ -23,6 +23,10 @@ a {
   transition: all 0.5s;
 }
 
+.toggleNav {
+  display: none;
+}
+
 a:hover {
   background: rgba(0, 0, 0, 0.3);
 }
@@ -33,6 +37,30 @@ a:hover {
   padding: 3.125rem;
 }
 
+.toggleNav {
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+
+input {
+  padding: 0.625rem;
+  border: 0;
+}
+
+section,
+footer {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.625rem;
+  margin: 1.25rem 0;
+  color: #fff;
+  font-weight: 100;
+}
+
+
 /* FLEX CONTAINER */
 
 .flex-nav ul {
@@ -42,6 +70,8 @@ a:hover {
   margin: 0;
   padding: 0;
 }
+
+/* FLEX ITEMS */
 
 .flex-nav li {
   flex: 3;
@@ -56,12 +86,49 @@ a:hover {
     flex-wrap: wrap;
   }
   .flex-nav li {
-    flex: 1 1 50% ;
+    flex: 1 1 50%;
   }
 }
 
 @media all and (max-width: 500px) {
-    .flex-nav li {
-        flex-basis: 100%;
-    }
+  .flex-nav li {
+    flex-basis: 100%;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapper > * {
+    order: 999;
+  }
+
+  .flex-nav {
+    order: 1;
+  }
+
+  .toggleNav {
+    display: block;
+  }
+
+  .flex-nav ul {
+    display: none;
+  }
+  .flex-nav ul.open {
+    display: flex;
+  }
+
+  /* Header */
+  .main-header {
+    order: 2;
+  }
+
+  /* Details */
+  .details {
+    order: 3;
+  }
+
+  /* Sign Up */
+  .signup {
+    order: 4;
+  }
 }

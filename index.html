@@ -1,37 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pure Flexbox Navigation</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css" class="css">
-</head>
-<body>
-    <header class="wrapper">
-        <nav class="flex-nav">
-            <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 2</a></li>
-                <li><a href="#">Item 3</a></li>
-                <li><a href="#">Item 4</a></li>
-                <li><a href="#">Item 5</a></li>
-                <li><a href="#">Item 6</a></li>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" class="css" />
+  </head>
+  <body>
+    <main class="wrapper">
+      <header class="main-header">
+        <h1><a href="#">What the Flexbox?!</a></h1>
+      </header>
+      <nav class="flex-nav">
+        <a href="#" class="toggleNav">☰ Menu</a>
+        <ul>
+          <li><a href="#">Item 1</a></li>
+          <li><a href="#">Item 2</a></li>
+          <li><a href="#">Item 3</a></li>
+          <li><a href="#">Item 4</a></li>
+          <li><a href="#">Item 5</a></li>
+          <li><a href="#">Item 6</a></li>
 
-                <li class="social">
-                    <a href="http://github.com/andrewteece" target="_blank"><i class="fa fa-github"></i></a></li>
-                <li class="social">
-                    <a href="http://facebook.com/andrewteece" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                <li class="social">
-                    <a href="http://instagram.com/andrewteecephotography" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                <li class="social">
-                    <a href="http://twitter.com/andrewteece43111" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            </ul>
-        </nav>
-    </header>
-</body>
+          <li class="social">
+            <a href="http://github.com/andrewteece" target="_blank"
+              ><i class="fa fa-github"></i
+            ></a>
+          </li>
+          <li class="social">
+            <a href="http://facebook.com/andrewteece" target="_blank"
+              ><i class="fa fa-facebook"></i
+            ></a>
+          </li>
+          <li class="social">
+            <a
+              href="http://instagram.com/andrewteecephotography"
+              target="_blank"
+              ><i class="fa fa-instagram"></i
+            ></a>
+          </li>
+          <li class="social">
+            <a href="http://twitter.com/andrewteece43111" target="_blank"
+              ><i class="fa fa-twitter"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <section class="hero">
+        <img
+          src="https://fastly.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU"
+          alt="macbook on desk"
+        />
+      </section>
+      <section class="details">
+        <p>A simple video course to help you master FlexBox!</p>
+        <p>Sign up today to grab all the videos and exercises!</p>
+      </section>
+      <section class="signup">
+        <form action="" class="signup">
+          <input type="text" placeholder="Your Name" />
+          <input type="email" placeholder="Email Address" />
+          <input type="submit" value="Sign Me up!" />
+        </form>
+      </section>
+      <footer>
+        <p>&copy; Andrew Teece</p>
+      </footer>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script>
+        $(function () {
+          $(".toggleNav").on("click", function () {
+            $(".flex-nav ul").toggleClass("open");
+          });
+        });
+      </script>
+  </body>
 </html>
